@@ -1,0 +1,24 @@
+server:
+  port: 18600
+spring:
+  profiles:
+    active: local
+  web:
+    resources:
+      # ?? ??? ?? ??
+      static-locations: classpath:/static/vue/
+  # h2 db ??
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  # jpa ??
+  jpa:
+    # jpa? ???? sql? ? ? ??.
+    show-sql: true
+    properties:
+      hibernate:
+        # ???? ??? ??? ????.
+        format_sql: true
+
